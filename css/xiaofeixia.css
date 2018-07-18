@@ -1,0 +1,161 @@
+body {
+  background-color: #fff;
+}
+
+.area1 {
+  min-width: 1200px;
+  height: 1050px;
+  background: url(../img/xiaofeixia/area1_bg.jpg) no-repeat top center;
+}
+
+.area1 .content {
+  width: 1105px;
+  padding-top: 295px;
+  margin: 0 auto;
+  position: relative;
+  display: none;
+}
+
+.area1 .content .brand {
+  width: 623px;
+  height: 37px;
+  background: url(../img/xiaofeixia/area1_brand.png) no-repeat 0 0;
+  margin: 0 auto 34px;
+}
+
+.area1 .content .title {
+  font-size: 37px;
+  color: #fff;
+  text-align: center;
+}
+
+.area1 .content .check-video {
+  display: block;
+  width: 173px;
+  height: 50px;
+  background: url(../img/xiaofeixia/area1_btn.jpg) no-repeat 0 0;
+  position: absolute;
+  top: 448px;
+  left: 466px;
+}
+
+.area2 .content {
+  width: 1367px;
+  margin: 0 auto;
+  padding: 90px 0 96px;
+}
+
+.area2 .content .title {
+  font-size: 40px;
+  color: #181818;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.area2 .content .slide {
+  width: 1106px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.area2 .slide .bd {
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+
+.area2 .slide .bd li > img {
+  display: block;
+  width: 1106px;
+  height: 745px;
+  margin-bottom: 56px;
+}
+
+.area2 .slide .bd li .tips {
+  font-size: 24px;
+  color: #181818;
+  text-align: center;
+}
+
+.area2 .slide .hd {
+  overflow: hidden;
+  margin-left: 250px;
+}
+
+.area2 .slide .hd li {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 6px;
+  background-color: #ccc;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.area2 .slide .hd li.on {
+  background-color: #666;
+}
+
+.area2 .slide .pre,
+.area2 .slide .next {
+  display: block;
+  width: 81px;
+  height: 82px;
+  background: url(../img/xiaofeixia/area2_slide_btn.png) no-repeat 0 0;
+  position: absolute;
+  top: 330px;
+}
+
+.area2 .slide .pre {
+  background-position: 0 0;
+  left: -130px;
+}
+
+.area2 .slide .next {
+  background-position: -81px 0;
+  right: -130px;
+}
+
+/*视频弹框*/
+.video-modal {
+  display: none;
+}
+.video-modal .black-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled="true", startColorstr="#B2000000", endColorstr="#B2000000");
+  background-color:rgba(0,0,0,0.7);
+  z-index: 9000;
+}
+
+:root .video-modal .black-cover { filter:none; }
+
+.video-modal .modal {
+  display: none;
+  width: 880px;
+  height: 596px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -298px 0 0 -440px;
+  background-color: #fff;
+  z-index: 9001;
+}
+
+.video-modal .modal .modal-hd {
+  position: relative;
+  height: 32px;
+  padding: 14px 20px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.video-modal .modal-hd .close {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../img/xiaofeixia/modal_close.png) no-repeat 0 0;
+  float: right;
+}
