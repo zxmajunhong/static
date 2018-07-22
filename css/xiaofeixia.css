@@ -1,11 +1,23 @@
 body {
   background-color: #fff;
+  min-width: 1300px;
+  overflow-x: hidden;
+}
+
+.width-1300 {
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.area {
+  min-width: 1300px;
 }
 
 .area1 {
-  min-width: 1200px;
+  min-width: 1300px;
   height: 1050px;
-  background: url(../img/xiaofeixia/area1_bg.jpg) no-repeat top center;
+  background: url(../img/xiaofeixia/area1_bg.jpg) no-repeat center top;
 }
 
 .area1 .content {
@@ -39,49 +51,119 @@ body {
   left: 466px;
 }
 
-.area2 .content {
-  width: 1367px;
-  margin: 0 auto;
-  padding: 90px 0 96px;
+/*第二个区域*/
+.area2-video-list {
+  overflow: hidden;
+  padding: 117px 0;
 }
 
-.area2 .content .title {
+.area2-video-list .each-video {
+  width: 637px;
+  height: 403px;
+  cursor: pointer;
+}
+
+.area2-video-list .v1 {
+  float: left;
+  background: url(../img/xiaofeixia/area2_video_poster1.jpg) no-repeat 0 0;
+}
+
+.area2-video-list .v2 {
+  float: right;
+  background: url(../img/xiaofeixia/area2_video_poster2.jpg) no-repeat 0 0;
+}
+
+.video-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 11111;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-layer .layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10999;
+}
+
+.video-layer .close {
+  cursor: pointer;
+  background-image: url(../img/xiaofeixia/close.png);
+  width: 23px;
+  height: 22px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 11000;
+}
+
+/*第三个区域*/
+.area3 {
+  padding-bottom: 114px;
+}
+
+.area3 .content {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.area3 .content .title {
   font-size: 40px;
   color: #181818;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.area2 .content .slide {
-  width: 1106px;
+.area3 .content .slide {
+  width: 1032px;
   margin: 0 auto;
   position: relative;
 }
 
-.area2 .slide .bd {
+.area3 .slide .bd {
   overflow: hidden;
-  margin-bottom: 56px;
 }
 
-.area2 .slide .bd li > img {
+.area3 .slide .bd li > img {
   display: block;
-  width: 1106px;
-  height: 745px;
-  margin-bottom: 56px;
+  width: 1032px;
+  height: 695px;
 }
 
-.area2 .slide .bd li .tips {
+.area3 .slide .bd li .tips-area {
+  height: 141px;
+  padding: 46px 170px 0 170px;
+}
+
+.area3 .tips-area .t1 {
   font-size: 24px;
+  color: #181818;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.area3 .tips-area .t2 {
+  font-size: 18px;
   color: #181818;
   text-align: center;
 }
 
-.area2 .slide .hd {
+.area3 .slide .hd {
   overflow: hidden;
-  margin-left: 250px;
+  margin-left: 320px;
 }
 
-.area2 .slide .hd li {
+.area3 .slide .hd li {
   display: block;
   float: left;
   width: 140px;
@@ -91,28 +173,471 @@ body {
   cursor: pointer;
 }
 
-.area2 .slide .hd li.on {
+.area3 .slide .hd li.on {
   background-color: #666;
 }
 
-.area2 .slide .pre,
-.area2 .slide .next {
+.area3 .slide .pre,
+.area3 .slide .next {
   display: block;
   width: 81px;
   height: 82px;
-  background: url(../img/xiaofeixia/area2_slide_btn.png) no-repeat 0 0;
+  background: url(../img/xiaofeixia/area3_slide_btn.png) no-repeat 0 0;
   position: absolute;
   top: 330px;
 }
 
-.area2 .slide .pre {
+.area3 .slide .pre {
   background-position: 0 0;
   left: -130px;
 }
 
-.area2 .slide .next {
+.area3 .slide .next {
   background-position: -81px 0;
   right: -130px;
+}
+
+/*第四个区域*/
+.area4 {
+  min-width: 1300px;
+  height: 1182px;
+  background: url(../img/xiaofeixia/area4_bg.jpg) no-repeat center top;
+}
+
+.area4 .title {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  padding-top: 105px;
+}
+
+.area4 .explain {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.area4 .video-list {
+  overflow: hidden;
+  margin: 50px 0 0 40px;
+}
+
+.area4 .video-list li {
+  position: relative;
+  width: 581px;
+  height: 321px;
+  float: left;
+  margin: 0 20px 46px 20px;
+}
+
+.area4 .video-list li.act .mask {
+  display: none;
+}
+
+.area4 .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.area4 .mask:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #1b1d1f;
+  opacity: .85;
+  filter: alpha(opacity=85)\9;
+}
+
+.area4 .mask .cover-img {
+  width: 581px;
+  height: 321px;
+}
+
+.area4 .mask .icon {
+  display: block;
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -38px;
+  z-index: 2;
+}
+
+.area4 .mask .txt {
+  display: block;
+  width: 77px;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  margin-left: -38px;
+  z-index: 2;
+}
+
+.area4 .video-list .video {
+  width: 581px;
+  height: 321px;
+}
+
+/*第五个区域*/
+.area5 .width-1300 {
+  padding: 100px 0 0 0;
+}
+
+.area5 .title {
+  font-size: 48px;
+  color: #181818;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.area5 .explain {
+  font-size: 20px;
+  color: #181818;
+  text-align: center;
+}
+
+.area5 .video-check {
+  width: 1032px;
+  height: 695px;
+  margin: 60px auto 0;
+  background: url(../img/xiaofeixia/area5_video_poster.jpg) no-repeat 0 0;
+  cursor: pointer;
+}
+
+/*第六个区域*/
+.area6 {
+  height: 976px;
+  background: url(../img/xiaofeixia//area6_bg.jpg) no-repeat center bottom;
+}
+
+.area6 .width-1300 {
+  padding-top: 160px;
+}
+
+.area6 .title {
+  font-size: 48px;
+  color: #181818;
+  font-weight: bold;
+  text-align: center;
+}
+
+.area6 .ele-list {
+  overflow: hidden;
+  margin: 276px 0 110px 240px;
+}
+
+.area6 .ele-list li {
+  float: left;
+  width: 220px;
+  height: 93px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-right: 75px;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+  position: relative;
+}
+
+.area6 .ele-list .p1 {
+  font-size: 20px;
+}
+
+.area6 .ele-list .p1 .num {
+  font-size: 46px;
+}
+
+.area6 .ele-list .p2 {
+  font-size: 18px;
+}
+
+.area6 .ele-list .pour {
+  font-size: 18px;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+}
+
+.area6 .explain {
+  font-size: 18px;
+  color: #fff;
+  width: 740px;
+  text-indent: -20px;
+  line-height: 30px;
+  margin-left: 295px;
+}
+
+/*第七个区域*/
+.area7 {
+  height: 849px;
+  background: url(../img/xiaofeixia/area7_bg.jpg) no-repeat center top;
+}
+
+.area7 .content-txt {
+  width: 462px;
+  position: absolute;
+  top: 330px;
+  left: 760px;
+}
+
+.area7 .title {
+  font-size: 48px;
+  color: #181818;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.area7 .explain {
+  font-size: 24px;
+  color: #181818;
+}
+
+/*第八个区域*/
+.area8 {
+  height: 849px;
+  background: url(../img/xiaofeixia/area8_bg.jpg) no-repeat center top;
+}
+
+.area8 .content-txt {
+  width: 462px;
+  position: absolute;
+  top: 265px;
+  left: 55px;
+}
+
+.area8 .title {
+  font-size: 48px;
+  color: #181818;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.area8 .explain {
+  font-size: 24px;
+  color: #181818;
+}
+
+/*第九个区域*/
+.area9 {
+  height: 1043px;
+  background: url(../img/xiaofeixia/area9_bg.jpg) no-repeat center top;
+}
+
+/*第十个区域*/
+.area10 {
+  height: 748px;
+  background: url(../img/xiaofeixia/area10_bg.jpg) no-repeat center top;
+}
+
+.area10 .content-txt {
+  width: 678px;
+  padding-top: 88px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.area10 .title {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.area10 .explain {
+  font-size: 24px;
+  color: #fff;
+}
+
+/*第十一区域*/
+.area11 {
+  height: 1015px;
+  background: url(../img/xiaofeixia/area11_bg.jpg) no-repeat center top;
+}
+
+.area11 .content-txt {
+  width: 424px;
+  position: absolute;
+  top: 416px;
+  left: 30px;
+}
+
+.area11 .title {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.area11 .explain {
+  font-size: 24px;
+  color: #fff;
+}
+
+/*第十二个区域*/
+.area12 {
+  height: 849px;
+  background: url(../img/xiaofeixia/area12_bg.jpg) no-repeat center top;
+}
+
+.area12 .content-txt {
+  width: 434px;
+  position: absolute;
+  top: 282px;
+  left: 850px;
+}
+
+.area12 .title {
+  font-size: 48px;
+  color: #181818;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.area12 .explain {
+  font-size: 24px;
+  color: #181818;
+}
+
+/*第十三个区域*/
+.area13 {
+  height: 1580px;
+}
+
+.area13 .content-txt {
+  width: 462px;
+  position: absolute;
+}
+
+.area13 .title {
+  font-size: 48px;
+  color: #181818;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.area13 .explain {
+  font-size: 24px;
+  color: #181818;
+}
+
+.area13 .c1 {
+  top: 312px;
+  left: 30px;
+}
+
+.area13 .img1 {
+  top: 29px;
+  left: 650px;
+}
+
+.area13 .c2 {
+  top: 1076px;
+  left: 846px;
+}
+
+.area13 .img2 {
+  top: 810px;
+  left: -310px;
+}
+
+.area13 .img {
+  width: 960px;
+  height: 754px;
+  position: absolute;
+}
+
+/*第十四个区域*/
+.area14 {
+  height: 736px;
+  background-color: #000;
+}
+
+.area14 .width-1300 {
+  padding-top: 190px;
+}
+
+.area14 .title {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.area14 .rule-list {
+  overflow: hidden;
+  margin: 0 0 78px 20px;
+}
+
+.area14 .rule-list li {
+  float: left;
+  width: 392px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  margin: 0 13px;
+}
+
+.area14 .icon {
+  display: block;
+  margin: 0 auto;
+}
+
+/*第十五个区域*/
+.area15 {
+  height: 514px;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+.area15 .width-1300 {
+  padding-top: 92px;
+}
+
+.area15 .title {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 38px;
+}
+
+.area15 .detail {
+  font-size: 21px;
+  color: #fff;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.area16 {
+  height: 1009px;
+}
+
+.area16 .width-1300 {
+  padding-top: 30px;
+}
+
+.area16 img {
+  display: block;
+  margin: 0 auto;
 }
 
 /*视频弹框*/
